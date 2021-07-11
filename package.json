@@ -1,0 +1,30 @@
+{
+  "name": "aolie_application",
+  "version": "0.0.1",
+  "description": "前端合成应用,没有具体业务",
+  "main": "index.js",
+  "author": "xxl",
+  "license": "ISC",
+  "scripts": {
+    "build": "webpack --progress --colors --bail --config ./webpack.product.config.js",
+    "dev": "webpack --progress --colors --open --config ./webpack.dev.config.js",
+    "start": "webpack-dev-server  --devtool eval --open  --config ./webpack.dev.config.js"
+  },
+  "config": {
+    "buildDir": "./build",
+    "devHost": "localhost",
+    "devPort": 5000,
+    "mockHost": "localhost",
+    "mockPort": 6000,
+    "publicPath": "luckyCloud"
+  },
+  "dependencies": {
+    "aolie_core": "^0.0.7",
+    "aolie_monitor_front": "^0.0.4",
+    "aolie_query_ui": "^0.0.4",
+    "aolie_wf_front": "^0.0.4"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.12"
+  }
+}
